@@ -11,8 +11,9 @@
  */
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdint.h> /* Using uintptr_t variables */
 /* Macro xoring to address  (ptr_a ^ ptr_b) return a void address */
-#define XOR(ptr_a,ptr_b)({ (void *)((unsigned long) ptr_a ^ (unsigned long) ptr_b); })
+#define XOR(ptr_a,ptr_b)({ (void *)((uintptr_t) ptr_a ^ (uintptr_t) ptr_b); })
 
 struct Node { 
 	int value;
